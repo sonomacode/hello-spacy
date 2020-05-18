@@ -17,19 +17,22 @@
 ## from the docs https://spacy.io/usage/rule-based-matching
 
 import spacy
+import long_text
 nlp = spacy.load('en_core_web_lg')
 
-text = '''
-Kayleigh McEnany
-@PressSec
-·
-7h
-FACT CHECK: President 
-@realDonaldTrump
- DID NOT dismantle the pandemic response office.
+# text = '''
+# Kayleigh McEnany
+# @PressSec
+# ·
+# 7h
+# FACT CHECK: President 
+# @realDonaldTrump
+#  DID NOT dismantle the pandemic response office.
 
-The NSC’s Counter-proliferation and Biodefense Directorate exists today!
-'''
+# The NSC’s Counter-proliferation and Biodefense Directorate exists today!
+# '''
+
+text = long_text.long_text
 
 doc = nlp(text)
 
